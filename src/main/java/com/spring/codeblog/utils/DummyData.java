@@ -15,7 +15,7 @@ public class DummyData {
     @Autowired
     private CodeblogRepository codeblogRepository;
 
-    @PostConstruct
+//    @PostConstruct
     public void savePosts() {
         Post post1 = new Post();
         post1.setAutor("Wesley Santos");
