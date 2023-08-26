@@ -50,7 +50,6 @@ public class CodeblogController {
 
         post.setData(LocalDate.now());
         service.save(post);
-
         return "redirect:/posts";
     }
 }
