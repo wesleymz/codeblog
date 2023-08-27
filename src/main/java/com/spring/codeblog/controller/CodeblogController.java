@@ -45,6 +45,10 @@ public class CodeblogController {
     @PostMapping(value = "/newpost")
     public String savePost(@Valid Post post, BindingResult result, RedirectAttributes attributes) {
         if (result.hasErrors()) {
+            attributes.addFlashAttribute(
+                    "message",
+                    "Verifique se os campos obrigatórios foram preenchidos!"
+            );
             return "redirect:/newpost";
         }
 
